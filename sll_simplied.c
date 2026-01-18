@@ -10,7 +10,6 @@ struct student
 
 struct student *head = NULL;
 
-/* Insert at Front */
 void insert_front()
 {
     struct student *n = malloc(sizeof(struct student));
@@ -20,7 +19,6 @@ void insert_front()
     head = n;
 }
 
-/* Insert at End */
 void insert_end()
 {
     struct student *n = malloc(sizeof(struct student));
@@ -36,13 +34,11 @@ void insert_end()
     t->next = n;
 }
 
-/* Delete Front */
 void delete_front()
 {
     head = head->next;
 }
 
-/* Delete End */
 void delete_end()
 {
     struct student *t = head;
@@ -50,7 +46,6 @@ void delete_end()
     t->next = NULL;
 }
 
-/* Display */
 void display()
 {
     struct student *t = head;

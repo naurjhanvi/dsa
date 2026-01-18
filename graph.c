@@ -2,7 +2,6 @@
 
 int n, adj[10][10], visited[10];
 
-/* -------- DFS -------- */
 void dfs(int v)
 {
     visited[v] = 1;
@@ -13,7 +12,6 @@ void dfs(int v)
             dfs(i);
 }
 
-/* -------- BFS -------- */
 void bfs(int start)
 {
     int q[10], front = 0, rear = -1;

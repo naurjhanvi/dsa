@@ -6,7 +6,6 @@ struct node {
     struct node *left, *right;
 };
 
-/* Create a new node */
 struct node* createNode(int data) {
     struct node* temp = (struct node*)malloc(sizeof(struct node));
     temp->data = data;
@@ -14,7 +13,6 @@ struct node* createNode(int data) {
     return temp;
 }
 
-/* Insert into BST */
 struct node* insert(struct node* root, int data) {
     if (root == NULL)
         return createNode(data);
@@ -27,7 +25,6 @@ struct node* insert(struct node* root, int data) {
     return root;
 }
 
-/* Inorder Traversal */
 void inorder(struct node* root) {
     if (root != NULL) {
         inorder(root->left);
@@ -36,7 +33,6 @@ void inorder(struct node* root) {
     }
 }
 
-/* Preorder Traversal */
 void preorder(struct node* root) {
     if (root != NULL) {
         printf("%d ", root->data);
@@ -45,7 +41,6 @@ void preorder(struct node* root) {
     }
 }
 
-/* Postorder Traversal */
 void postorder(struct node* root) {
     if (root != NULL) {
         postorder(root->left);
@@ -54,7 +49,6 @@ void postorder(struct node* root) {
     }
 }
 
-/* Search in BST */
 void search(struct node* root, int key) {
     if (root == NULL) {
         printf("Key not found\n");

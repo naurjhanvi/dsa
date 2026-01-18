@@ -27,10 +27,8 @@ void checkCurrentStackPalindrome() {
     }
 
     int isPalindrome = 1;
-    int n = top + 1; // Number of elements currently in stack
+    int n = top + 1; 
     
-    // We compare elements from the bottom (0) and the top (top)
-    // and move towards the middle.
     for (int i = 0; i < n / 2; i++) {
         if (stack[i] != stack[top - i]) {
             isPalindrome = 0;

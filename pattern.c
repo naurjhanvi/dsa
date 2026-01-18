@@ -12,30 +12,27 @@ void stringmatch()
         {
             i++;
             m++;
-            // If we reached the end of the pattern string (Match Found)
             if (pat[i] == '\0')
             {
                 flag = 1;
-                // Copy replacement string into result
                 for (k = 0; rep[k] != '\0'; k++, j++)
                 {
                     res[j] = rep[k];
                 }
                 i = 0;
-                c = m; // Update current position to skip the matched pattern
+                c = m; 
             }
         }
         else
         {
-            // Mismatch: Copy current char from main string to result
             res[j] = str[c];
             j++;
             c++;
-            m = c; // Reset matching pointer
-            i = 0; // Reset pattern pointer
+            m = c; 
+            i = 0; 
         }
     }
-    res[j] = '\0'; // Null terminate the result string
+    res[j] = '\0'; 
 }
 
 void main()
